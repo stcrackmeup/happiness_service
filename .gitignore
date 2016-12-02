@@ -1,0 +1,11 @@
+/target/
+/bin/
+/apiDocument/
+/.project
+/.classpath
+/.settings/
+
+.idea
+/deploy/
+
+#javascript
