@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<!-- Spring Security 를 사용하여 로그인 및 권한 체크를 하기 위해서는 URL 패턴방식과 Controller 메서드의
+		애노테이션 선언 방식이 있다. -->
+	<!-- 애노테이션 방식을 사용하기 위해서는 global-method-security 의 pre-post-annotations 속성을 
+		enabled 로 해줘야 한다. -->
+	<security:global-method-security
+		pre-post-annotations="enabled" secured-annotations="disabled"
+		jsr250-annotations="disabled" proxy-target-class="true">
+		<security:expression-handler ref="expressionHandler" />
+	</security:global-method-security>
+	
+	<!-- Configures support for @Controllers -->
+	<!-- <mvc:annotation-driven>
+		<mvc:argument-resolvers>
+			 <bean class="com.naver.videoservice.support.argument.UserRequestWebArgumentResolver" />
+			<bean class="com.naver.videoservice.support.argument.ServiceFilterWebArgumentResolver" />
+			<bean class="com.naver.videoservice.support.argument.CountryCodeWebArgumentResolver" />
+			<bean class="com.nhncorp.lucy.spring.mvc.attribute.RequestAttributeArgumentResolver" />
+            <bean class="org.springframework.mobile.device.DeviceWebArgumentResolver" /> 
+		</mvc:argument-resolvers>
+		
+		<mvc:message-converters>
+			 <bean class="com.naver.videoservice.support.json.JsonMvcMessageConverter" >
+				<property name="supportedMediaTypes" value="application/json" />
+			</bean> 
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	<mvc:default-servlet-handler />
+
+	<mvc:interceptors>
+<bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"
+			p:paramName="lang" />
+		<bean class="com.naver.videoservice.web.tvcast.EnvironmentInjectionInterceptor" />
+		<bean class="com.naver.videoservice.web.interceptor.JsonMvcRequestParameterConverter" />
+		<bean class="com.naver.videoservice.web.interceptor.ThisClipCookieInterceptor" /> 
+	</mvc:interceptors>
+ -->
+	<context:component-scan base-package="com.leopold">
+		<context:include-filter expression="org.springframework.stereotype.Controller" type="annotation" />
+		<context:exclude-filter expression="^.*web.alarmi.*$" type="regex" />
+	</context:component-scan>
+    
+	<!-- Configures for Tiles2 -->
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.tiles2.TilesView" />
+	</bean>
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/layouts</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+
+<!-- 	<bean
+		class="com.naver.videoservice.support.exception.TvcastBaseExceptionResolver">
+	</bean> -->
+
+    <bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxInMemorySize" value="4096" />
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="maxUploadSize" value="4294967296" />
+	</bean>
+
+<!-- 	<bean class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"
+		id="tilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/layouts/definition/layouts.xml</value>
+				<value>/WEB-INF/layouts/definition/views.xml</value>
+			</list>
+		</property>
+	</bean> -->
+
+	<!-- <bean id="accountLogProxy" class="com.naver.videoservice.support.AccountLogProxy" />
+	<aop:aspectj-autoproxy />
+	<aop:config>
+		<aop:aspect id="accountJobAspect" ref="accountLogProxy" />
+	</aop:config> -->
+</beans>

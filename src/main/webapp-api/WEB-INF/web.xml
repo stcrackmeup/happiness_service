@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring/applicationContext.xml</param-value>
+	</context-param>
+<!-- 	<filter>
+		<filter-name>nullSession</filter-name>
+		<filter-class>com.nhncorp.lucy.spring.web.filter.NullSessionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>nullSession</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+ -->
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Servlet Filter 라이프 사이클과 연계해 스프링 빈 의존성을 Servlet Filter에 바인딩하는데 사용 -->
+	<!-- Spring MVC 앞에 먼저 Spring Security 가 작동하도록 설정 -->
+	<!-- <filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/_/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping> -->
+ 
+<!-- 	<filter>
+		<filter-name>iims2-initial-filter</filter-name>
+		<filter-class>com.nhncorp.iims2.filter.IIMS2InitialFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>iims2-initial-filter</filter-name>
+		<url-pattern>/initCookie</url-pattern>
+	</filter-mapping>		
+	<filter>
+		<filter-name>iims2-filter</filter-name>
+		<filter-class>com.nhncorp.iims2.filter.IIMS2Filter</filter-class>
+		<init-param>
+			<param-name>exclude_url</param-name>
+			<param-value>/api/*</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>iims2-filter</filter-name>
+		<url-pattern>/_/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>iims2-filter</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+ -->
+	<!-- <filter>
+		<filter-name>CrossScriptingFilter</filter-name>
+		<filter-class>com.naver.videoservice.support.filter.CrossScriptingFilter</filter-class>
+		<init-param>
+			<param-name>excludePatterns</param-name>
+			<param-value>_/</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>CrossScriptingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+    <!--
+        서버 뜰 시 IP와 Type (웹, 모바일, 기타)을 DB 에 저장하는 기능 (현재는 사용하지 않으므로 주석 처리 함)
+    -->
+    <!--
+	<listener>
+		<listener-class>com.naver.videoservice.support.config.ConfigurationListener</listener-class>
+	</listener>
+    -->
+
+<!-- 	<listener> 
+	   <listener-class>
+	     com.nhncorp.lucy.securitybeans.listener.DefencePolicyInitializer 
+	   </listener-class> 
+	</listener> -->
+	
+	<servlet>
+		<servlet-name>springServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/mvc-config.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<!-- <jsp-config>
+		<taglib>
+			<taglib-uri>http://tvcast.naver.com/videoservice</taglib-uri>
+			<taglib-location>/WEB-INF/tld/videoservice.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+	 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/views/error/notfound.html</location>
+	</error-page>	
+	
+	<error-page>
+		<error-code>400</error-code>
+		<location>/WEB-INF/views/error/notfound.html</location>
+	</error-page>	
+	<error-page>
+		<error-code>401</error-code>
+		<location>/WEB-INF/views/error/notAuthorized.html</location>
+	</error-page>	
+</web-app>

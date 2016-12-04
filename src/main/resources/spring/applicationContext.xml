@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+    <!-- 어플리케이션 에서는 Controller 를 제외한 컴포넌트 스캔 -->
+    <!-- Controller 설정은 mvc-config.xml -->
+    <context:component-scan base-package="com.leopold">
+        <context:exclude-filter expression="org.springframework.stereotype.Controller"
+            type="annotation" />
+    </context:component-scan>
+	<!-- <import resource="applicationContext-persistent.xml" />
+	<import resource="applicationContext-environment.xml" /> -->
+	<!-- <import resource="applicationContext-perphase-environment.xml" />
+	<import resource="applicationContext-perphaseservice-environment.xml" />
+    <import resource="applicationContext-perservice.xml" />
+	<import resource="applicationContext-security.xml" />
+	<import resource="applicationContext-cache.xml" />
+	<import resource="applicationContext-job.xml" />
+	<import resource="applicationContext-redis-conf.xml" />
+	<import resource="applicationContext-special.xml" />
+	<import resource="applicationContext-nid-conf.xml" />
+	<import resource="applicationContext-ngine-conf.xml" />
+	<import resource="applicationContext-build-conf.xml" />
+	<import resource="applicationContext-nbase.xml" />
+	<import resource="applicationContext-nbase-persistent.xml" />
+	<import resource="applicationContext-flume-conf.xml" /> -->
+</beans>

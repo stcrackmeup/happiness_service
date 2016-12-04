@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<!-- 재활용 가능한 Tiles -->
+	<definition name="pageNavigation" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/pageNavigation.jsp" />
+	</definition>
+	
+	<definition name="openGraph" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/openGraph.jsp" />
+	</definition>
+	
+	<definition name="channelSearch" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/channelSearch.jsp" />
+	</definition>
+	
+	<definition name="partnerChannelTab" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/partnerChannelTab.jsp" />
+	</definition>
+	
+	<definition name="servicePageNavigation" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/servicePageNavigation.jsp" />
+	</definition>
+	<definition name="servicePageNavigationWhite" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/servicePageNavigationWhite.jsp" />
+	</definition>
+	
+	<definition name="servicePageNavigation" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/servicePageNavigation.jsp" />
+	</definition>
+	
+	<definition name="lineTvPageNavigation" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/lineTvPageNavigation.jsp" />
+	</definition>
+	
+	<definition name="clipThumbnail" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/clipThumbnail.jsp" />
+	</definition>
+	
+	<definition name="notice" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/notice.jsp" />
+	</definition>
+	
+	<definition name="player" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/player/player.jsp" />
+	</definition>
+	
+	<definition name="linkPlayer" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/linkPlayer.jsp" />
+	</definition>
+	
+	<definition name="top" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/top.jsp" />
+	</definition>
+	
+	<definition name="footer" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/footer.jsp" />
+	</definition>
+	
+	<definition name="topCategoryClip" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/topCategoryClip.jsp" />
+	</definition>
+
+	<definition name="topCategoryChannelList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/topCategoryChannelList.jsp" />
+	</definition>
+
+	<definition name="recentCategoryChannelList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/recentCategoryChannelList.jsp" />
+	</definition>	
+
+	<definition name="onlyValue" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/onlyValue.jsp" />
+	</definition>
+	
+	<definition name="bestChannelList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/bestChannelList.jsp" />
+	</definition>
+	<definition name="hotIssueChannelList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/hotIssueChannelList.jsp" />
+	</definition>
+	
+	<definition name="recentHomeClipList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/recentHomeClipList.jsp" />
+	</definition>
+	
+	<definition name="recentCategoryClipList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/recentCategoryClipList.jsp" />
+	</definition>
+	
+	<definition name="themeRecommendList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/themeRecommendList.jsp" />
+	</definition>
+	<definition name="admin/theme/preview" extends="servicePreviewLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/themeRecommendList.jsp" />
+	</definition>
+	
+	<definition name="promotionChannel" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/promotionChannel.jsp" />
+	</definition>
+	
+	<definition name="admin/home/promotionChannel/preview" extends="servicePreviewLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/promotionChannel.jsp" />
+	</definition>
+	
+	<definition name="stationList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/stationList.jsp" />
+	</definition>
+	
+	<definition name="homeScheduleTable" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/homeScheduleTable.jsp" />
+	</definition>	
+
+	<definition name="dramaScheduleTable" extends="emptyLayout">
+	    <put-attribute name="body" value="/WEB-INF/layouts/fragments/dramaScheduleTable.jsp" />
+	</definition>
+	
+	<definition name="weekOfDayScheduleTable" extends="emptyLayout">
+	    <put-attribute name="body" value="/WEB-INF/layouts/fragments/weekOfDayScheduleTable.jsp" />
+	</definition>
+	
+	<definition name="liberalScheduleTable" extends="emptyLayout">
+	    <put-attribute name="body" value="/WEB-INF/layouts/fragments/liberalScheduleTable.jsp" />
+	</definition>
+	
+	<definition name="etcScheduleTable" extends="emptyLayout">
+	    <put-attribute name="body" value="/WEB-INF/layouts/fragments/etcScheduleTable.jsp" />
+	</definition>
+	
+	<definition name="alphabetScheduleTable" extends="emptyLayout">
+	    <put-attribute name="body" value="/WEB-INF/layouts/fragments/alphabetScheduleTable.jsp" />
+	</definition>
+	
+	<definition name="alertAndClose" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/alertAndClose.jsp" />
+	</definition>
+
+	<definition name="alertAndRedirect" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/alertAndRedirect.jsp" />
+	</definition>
+	
+	<definition name="alertAndRedirectPopup" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/alertAndRedirectPopup.jsp" />
+	</definition>
+
+	<definition name="alertAndBack" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/alertAndBack.jsp" />
+	</definition>
+	
+	<definition name="alertAndRefresh" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/alertAndRefresh.jsp" />
+	</definition>
+	
+	<definition name="refreshAndClose" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/layouts/fragments/refreshAndClose.jsp" />
+	</definition>
+	<!-- //재활용 가능한 Tiles -->
+
+	<!-- 팝업 페이지 -->
+	<definition name="admin/partner/stationForm" extends="popupFormLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/partner/stationForm.jsp" />
+	</definition>
+
+	<definition name="admin/partner/partnerForm" extends="popupFormLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/partner/partnerForm.jsp" />
+	</definition>
+	<definition name="admin/partner/copyrightpolicy/update" extends="popupFormLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/partner/copyrightPolicyUpdate.jsp" />
+	</definition>
+	<definition name="admin/notice/noticeForm" extends="popupFormLayout2">
+		<put-attribute name="body" value="/WEB-INF/views/admin/notice/noticeForm.jsp" />
+	</definition>
+	<definition name="admin/notice/preview" extends="popupLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/notice/preview.jsp" />
+	</definition>
+	<definition name="partner/copyright/filtering/inputForm" extends="popupFormLayout2">
+		<put-attribute name="body" value="/WEB-INF/views/partner/copyright/filtering/form.jsp" />
+	</definition>
+	<definition name="admin/copyright/filtering/assignForm" extends="popupFormLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/copyright/filtering/assignForm.jsp" />
+	</definition>
+	<definition name="flash/devUpload" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/flash/devUpload.jsp" />
+	</definition>
+	<definition name="service/p2p/help/cassiodDiagnosis" extends="popupLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/p2p/help/cassiodDiagnosis.jsp" />
+	</definition>
+	<definition name="service/p2p/help/nlivecastDiagnosis" extends="popupLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/p2p/help/nlivecastDiagnosis.jsp" />
+	</definition>		
+	<!-- // 팝업 페이지 -->
+	
+  	<definition name="search/searchResult" extends="searchLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/search/searchResult.jsp" />
+  	</definition>
+  	
+  	<definition name="search/searchNoResult" extends="searchLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/search/searchNoResult.jsp" />
+  	</definition>
+
+	<definition name="flash.socialPlugInPopup" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/flash/socialPlugInPopup.jsp" />
+	</definition>
+
+	<!-- 공모전 -->
+	<definition name="service/*/skin/contestCommon/*" extends="contestCommonLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/{1}/skin/contestCommon/{2}.jsp" />
+	</definition>
+	<definition name="service/*/skin/contestDingdong/*" extends="contestDingdongLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/{1}/skin/contestDingdong/{2}.jsp" />
+	</definition>
+	<!-- //공모전 -->
+  	 
+  	<!-- DIY 이벤트  -->
+  	<definition name="service/special/diy/*" extends="emptyLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/special/diy/{1}.jsp" />
+  	</definition>
+  	<!-- // DIY 이벤트 -->
+  	
+  	<!-- 슈퍼스타K5 서비스  -->
+  	<definition name="service/special/superstark5/*" extends="specialSuperstark5Layout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/special/superstark5/{1}.jsp" />
+  	</definition>
+  	<!-- 슈퍼스타K5 서비스  -->
+  	
+	<!-- special 페이지 -->
+	<definition name="service/special/multitrack" extends="specialTopAndOnePageLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/special/multitrack.jsp" />
+  	</definition>
+  	
+  	<definition name="service/special/support/*" extends="specialTopAndOnePageLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/special/support/{1}.jsp" />
+  	</definition>
+
+	<definition name="service/special/rewind/*" extends="annualRewindLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/special/rewind/{1}.jsp" />
+  	</definition>
+	
+  	<definition name="service/special/*/*" extends="emptyLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/special/{1}/{2}.jsp" />
+  	</definition>
+  	
+  	<definition name="service/special/*/*/*" extends="emptyLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/special/{1}/{2}/{3}.jsp" />
+  	</definition>
+	<!-- //special 페이지 -->
+	
+	<!-- KPopstar3 채널 클립 스킨 기능 -->
+  	<definition name="service/*/skin/kpopstar3/*" extends="specialKpopstar3Layout">
+  		<put-attribute name="top" value="/WEB-INF/views/service/channel/skin/kpopstar3/skinTop.jsp" />
+  		<put-attribute name="body" value="/WEB-INF/views/service/{1}/skin/kpopstar3/{2}.jsp" />
+  		<put-attribute name="footer" value="/WEB-INF/views/service/channel/skin/kpopstar3/skinFooter.jsp" />
+  	</definition>
+  	<!-- // 채널 클립 스킨 기능 -->
+  	
+  	<!-- 채널 클립 스킨 기능 -->
+  	<definition name="service/*/skin/*/*" extends="channelClipSkinLayout">
+  		<put-attribute name="top" value="/WEB-INF/views/service/channel/skin/{2}/skinTop.jsp" />
+  		<put-attribute name="body" value="/WEB-INF/views/service/{1}/skin/{2}/{3}.jsp" />
+  		<put-attribute name="footer" value="/WEB-INF/views/service/channel/skin/{2}/skinFooter.jsp" />
+  	</definition>
+  	<!-- // 채널 클립 스킨 기능 -->
+  	
+  	<definition name="special/live" extends="emptyLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/special/live/live.jsp" />
+  	</definition>
+  	
+  	<definition name="special/live/beforeLive" extends="emptyLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/special/live/beforeLive.jsp" />
+  	</definition>
+
+	<!-- 서비스 (임시) -->
+	<definition name="pc/*" extends="pcLayout">
+		<put-attribute name="body" value="/WEB-INF/views/pc/{1}.jsp" />
+	</definition>
+
+  	<!-- 서비스  -->
+  	<definition name="service/*/*" extends="serviceLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/{1}/{2}.jsp" />
+  	</definition>
+  	<definition name="service/*/*/*" extends="serviceLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/{1}/{2}/{3}.jsp" />
+  	</definition>
+  	<!-- //서비스  -->
+  	
+  	<!-- 모바일  -->
+  	<definition name="mobile/*/*" extends="mobileLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/{1}/{2}.jsp" />
+  	</definition>
+  	<definition name="mobile/*/*/*" extends="mobileLayout">
+  		<put-attribute name="body" value="/WEB-INF/views/service/{1}/{2}/{3}.jsp" />
+  	</definition>
+  	<!-- //모바일  -->
+
+	<!-- iframe 페이지  -->
+	<definition name="clip/uploadImage" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/clip/uploadImage.jsp"/>
+	</definition>
+
+    <!--신규 운영툴-->
+    <definition name="ntc/admin/*/*" extends="ntcLayout">
+        <put-attribute name="body" value="/WEB-INF/views/ntc/admin/{1}/{2}.jsp" />
+    </definition>
+
+    <definition name="ntc/admin/*/*/*" extends="ntcLayout">
+        <put-attribute name="body" value="/WEB-INF/views/ntc/admin/{1}/{2}/{3}.jsp" />
+    </definition>
+    
+    <definition name="ntc/admin/*/*/*/*" extends="ntcLayout">
+        <put-attribute name="body" value="/WEB-INF/views/ntc/admin/{1}/{2}/{3}/{4}.jsp" />
+    </definition>
+    
+    <definition name="ntc/partner/*/*" extends="ntcLayout">
+        <put-attribute name="body" value="/WEB-INF/views/ntc/partner/{1}/{2}.jsp" />
+    </definition>
+
+    <definition name="ntc/partner/*/*/*" extends="ntcLayout">
+        <put-attribute name="body" value="/WEB-INF/views/ntc/partner/{1}/{2}/{3}.jsp" />
+    </definition>
+    
+    <definition name="ntc/partner/*/*/*/*" extends="ntcLayout">
+        <put-attribute name="body" value="/WEB-INF/views/ntc/partner/{1}/{2}/{3}/{4}.jsp" />
+    </definition>
+
+    <definition name="ntc/util/*/*/*" extends="ntcLayout">
+        <put-attribute name="body" value="/WEB-INF/views/ntc/util/{1}/{2}/{3}.jsp" />
+    </definition>
+    <!--// 신규 운영툴-->
+
+	<!-- 운영툴  -->
+    <definition name="admin/home/hotissue/list" extends="defaultLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/home/hotissue/list.jsp" />
+	</definition>
+	<!-- 
+	<definition name="admin/home/hotIssue/preview" extends="servicePreviewLayout">
+		<put-attribute name="body" value="/WEB-INF/views/service/category/hotIssueChannelList.jsp" />
+  	</definition>
+  	 -->
+  	<definition name="admin/home/hotIssue/preview" extends="defaultLayout">
+  		<put-attribute name="header" value="/WEB-INF/views/service/home/hotclip/previewHead.jsp" />
+		<put-attribute name="body"   value="/WEB-INF/views/service/home/hotclip/preview.jsp" />
+  	</definition>
+	<definition name="admin/stats/calculate/adminList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/stats/calculate/adminList.jsp" />
+	</definition>
+	<definition name="admin/stats/calculate/excelDownload" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/stats/calculate/excelDownload.jsp" />
+	</definition>
+	<definition name="admin/stats/calculate/excelUpload" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/stats/calculate/excelUpload.jsp" />
+	</definition>
+	<definition name="admin/stats/calculate/excelUploadResult" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/stats/calculate/excelUploadResult.jsp" />
+	</definition>
+	<definition name="channelPlaylistPreview" extends="servicePreviewLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/channel/playlist/preview.jsp" />
+	</definition>
+	<definition name="admin/advertise/exculteList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/advertise/excludeList.jsp" />
+	</definition>
+	<definition name="admin/advertise/pushToServiceResult" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/advertise/pushToServiceResult.jsp" />
+	</definition>
+
+    <!--기존 운영툴-->
+	<definition name="admin/*" extends="partnerLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/{1}.jsp" />
+	</definition>
+	<definition name="admin/*/*" extends="partnerLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}.jsp" />
+	</definition>
+	<definition name="admin/*/*/*" extends="partnerLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}/{3}.jsp" />
+	</definition>
+	<definition name="admin/*/*/*/*" extends="partnerLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}/{3}/{4}.jsp" />
+	</definition>
+	<definition name="admin/*/*/*/*/*" extends="partnerLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}/{3}/{4}/{5}.jsp" />
+	</definition>
+	<definition name="admin/*/*/*/*/*/*" extends="partnerLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}/{3}/{4}/{5}/{6}.jsp" />
+	</definition>
+    <!--//기존 운영툴-->
+
+	<definition name="backend/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/backend/{1}.jsp" />
+	</definition>
+		
+	<definition name="backend/*/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/backend/{1}/{2}.jsp" />
+	</definition>
+	
+	<definition name="backend/*/*/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/backend/{1}/{2}/{3}.jsp" />
+	</definition>
+
+	<definition name="partner/*/*" extends="partnerLayout">
+		<put-attribute name="body" value="/WEB-INF/views/partner/{1}/{2}.jsp" />
+	</definition>
+	<definition name="partner/stats/calculate/adminList" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/stats/calculate/partnerList.jsp" />
+	</definition>
+	<definition name="copyright/filtering/createCopyrightProgramNo" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/partner/copyright/filtering/createCopyrightProgramNo.jsp" />
+	</definition>
+	<definition name="copyright/filtering/createProgramGroup" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/partner/copyright/filtering/createProgramGroup.jsp" />
+	</definition>
+	<!-- //운영툴  -->
+	
+	<!-- API -->
+	<definition name="api/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/api/{1}.jsp" />
+	</definition>
+
+	<definition name="api/*/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/api/{1}/{2}.jsp" />
+	</definition>
+
+	<definition name="api/*/*/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/api/{1}/{2}/{3}.jsp" />
+	</definition>
+
+	<definition name="api/*/*/*/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/api/{1}/{2}/{3}/{4}.jsp" />
+	</definition>
+
+	<definition name="api/*/*/*/*/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/api/{1}/{2}/{3}/{4}/{5}.jsp" />
+	</definition>
+	<!-- //API -->
+	
+	<!-- Error -->
+	<definition name="error/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/error/{1}.jsp" />
+	</definition>
+	<!-- //Error -->
+
+	<definition name="*/*" extends="defaultLayout">
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+	
+	<definition name="*/*/*" extends="defaultLayout">
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+	</definition>
+	
+	<definition name="*/*/*/*" extends="defaultLayout">
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}/{3}/{4}.jsp" />
+	</definition>
+	
+	<!-- 모바일 -->
+	<definition name="mobile/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/mobile/{1}.jsp" />
+	</definition>
+	
+	<definition name="mobile/*/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/mobile/{1}/{2}.jsp" />
+	</definition>
+	
+	<definition name="mobile/*/*/*" extends="emptyLayout">
+		<put-attribute name="body" value="/WEB-INF/views/mobile/{1}/{2}/{3}.jsp" />
+	</definition>
+	<!-- //모바일 -->
+	
+	<definition name="cp/tvbrand" extends="serviceLayout">
+		<put-attribute name="body" value="/WEB-INF/views/cp/tvbrand.jsp" />
+	</definition>
+</tiles-definitions>
